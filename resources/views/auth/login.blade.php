@@ -29,9 +29,16 @@
             </div>
         </div>
 
-        <div class="mt-6 flex items-center justify-end gap-x-6 max-w-md mx-auto">
-            <a href="/" class="text-sm font-semibold text-gray-900">Cancel</a>
-            <x-form-button>Log in</x-form-button>
+        <div class="mt-6 flex items-center justify-between gap-x-6 max-w-md mx-auto">
+
+            <div class="text-sm font-semibold text-gray-900">
+                <a href="/register" class="text-grey-600 hover:text-purple-900"> Don't have an account?</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="/" class="text-sm font-semibold text-gray-900">Cancel</a>
+                <x-form-button>Log in</x-form-button>
+            </div>
         </div>
     </form>
 </x-layout>
