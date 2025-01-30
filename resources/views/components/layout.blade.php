@@ -19,13 +19,14 @@
         <div class="flex h-16 items-center justify-between">
             <h1 class="text-white text-lg font-semibold">TaskList</h1>
             <div class="space-x-5">
-                <a href="/" class="text-gray-300 hover:text-white border solid 1 py-1 px-2 rounded-[15px]">Home</a>
-                <a href="/about" class="text-gray-300 hover:text-white border solid 1 py-1 px-2 rounded-[15px]">About Page</a>
+                <x-nav href="/" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('/')">Home</x-nav>
+                <x-nav href="/about" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('about')">About Page</x-nav>
             </div>
-            <a href="{{ route('login') }}" class="bg-purple-900 text-white px-4 py-2 rounded hover:bg-purple-950">Log in</a>
+            <x-nav href="{{ route('login') }}" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('login')">Log in</x-nav>
         </div>
     </div>
 </nav>
+
 
 <main class="flex-grow pt-16">
     <header class="bg-white shadow">
