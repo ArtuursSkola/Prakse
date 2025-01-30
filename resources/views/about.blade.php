@@ -1,9 +1,12 @@
 <x-layout>
     <x-slot:heading>
-        About Page
+        <div class="flex items-center justify-center">
+            About page
+        </div>
     </x-slot:heading>
 <div class="flex-grow pt-16">
     <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">TaskList</h2>
         <p class="abt">
             Welcome to TaskPro, your ultimate destination for efficient task management and organization!
             Our website offers an intuitive and user-friendly platform for creating and managing to-do lists,
@@ -21,6 +24,24 @@
             of organized individuals and take the first step towards a more productive and stress-free life.
             TaskPro – where your tasks find a home!
         </p>
+        <br>
+        <br>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Our To Do List website exceeds the competition, because our website has:</h2>
+        <ul class="list-disc pl-6 space-y-3">
+            <li>Easy-to-use, minimalist interface for a smooth task management experience</li>
+            <li>Customizable task lists to suit your unique needs and priorities</li>
+            <li>Set deadlines and reminders to ensure you never miss an important task</li>
+            <li>Real-time collaboration, allowing you to share and track tasks with teams</li>
+            <li>Cloud synchronization, so you can access your to-do lists anywhere, anytime</li>
+            <li>Secure task management with encrypted data storage</li>
+            <li>Mobile-responsive design, enabling full functionality on any device</li>
+            <li>Free version available with premium features for advanced users</li>
+        </ul>
+
+        <p class="mt-6 text-gray-800">
+            Choose us for your task management needs and experience the difference. Our platform is designed to make your life easier, more productive, and stress-free. With a combination of simplicity, advanced features, and seamless integration, we stand apart from other to-do list apps. Get started with us today and see how we can help you stay organized and reach your goals!
+        </p>
+
     </main>
 </div>
 </x-layout>

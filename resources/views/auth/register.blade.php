@@ -8,9 +8,9 @@
     <div class="flex justify-center items-center min-h-screen">
         <form method="POST" action="/register" class="w-full max-w-lg">
             @csrf
-            <div class="space-y-12">
+            <div class="space-y-5">
                 <div class="border-b border-gray-900/10 pb-12">
-                    <div class="grid grid-cols-1 gap-x-6 gap-y-8">
+                    <div class="grid grid-cols-1 gap-x-6 gap-y-3">
 
                         <x-form-field class="sm:col-span-3">
                             <x-form-label for="first_name">First name</x-form-label>

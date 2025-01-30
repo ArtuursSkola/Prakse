@@ -9,7 +9,7 @@
         @csrf
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12 max-w-md mx-auto">
-                <div class="grid grid-cols-1 gap-y-8">
+                <div class="grid grid-cols-1 gap-y-3">
                     <x-form-field>
                         <x-form-label for="email">Email</x-form-label>
                         <div class="mt-2">

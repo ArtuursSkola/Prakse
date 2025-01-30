@@ -1,6 +1,8 @@
 <x-layout>
     <x-slot:heading>
-        Home Page
+        <div class="flex items-center justify-center">
+            Home page
+        </div>
     </x-slot:heading>
 
     <div class="flex-grow pt-16 ">
