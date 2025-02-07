@@ -9,16 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterUserController extends Controller
 {
-    // Show the registration form
+
     public function create()
     {
-        return view('auth.register'); // Ensure this view points to the correct registration page
+        return view('auth.register');
     }
 
-    // Handle the registration form submission
+
     public function store(Request $request)
     {
-        // Validate the registration form input
+
         $validated = $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
@@ -26,7 +26,7 @@ class RegisterUserController extends Controller
             'password' => ['required', 'confirmed', 'min:8'],
         ]);
 
-        // Create a new user record in the database
+
         $user = User::create([
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
@@ -34,11 +34,11 @@ class RegisterUserController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        // Log the user in immediately after registration
+
         Auth::login($user);
 
-        // Redirect to the dashboard after successful registration
-        return redirect('/dashboard');
+
+        return redirect('/');
     }
 }
 

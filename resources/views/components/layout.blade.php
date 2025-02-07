@@ -20,9 +20,21 @@
             <h1 class="text-white text-lg font-semibold">TaskList</h1>
             <div class="space-x-5">
                 <x-nav href="/" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('/')">Home</x-nav>
+                @auth
+                    <x-nav href="{{ route('todos.index') }}" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('todos')">ToDoList</x-nav>
+                @endauth
+
                 <x-nav href="/about" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('about')">About Page</x-nav>
             </div>
+            @guest
             <x-nav href="{{ route('login') }}" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('login')">Log in</x-nav>
+                @endguest
+            @auth
+                <form method="Post" action="/logout">
+                    @csrf
+                    <x-form-button>Log out</x-form-button>
+                </form>
+            @endauth
         </div>
     </div>
 </nav>
