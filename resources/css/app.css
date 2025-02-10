@@ -39,8 +39,7 @@ ul li {
     border: none;
     height: 2px;
     background-color: #333;
-    width: 47%; /* Limit the width */
-    /*margin: 20px auto; !* Center it horizontally and add vertical spacing *!*/
+    width: 47%;
     border-radius: 5px;
 }
 
@@ -54,5 +53,22 @@ ul li {
 }
 footer{
     margin-top: 180px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9f77cb;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rebeccapurple;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 6px;
 }
 

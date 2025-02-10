@@ -6,24 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
-        // Drop the old job-related tables
+
         Schema::dropIfExists('jobs');
         Schema::dropIfExists('job_batches');
         Schema::dropIfExists('failed_jobs');
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
-        // If you need to revert this migration, you could recreate the tables here.
-        // (Optional: Only add this if you want to be able to rollback this migration)
 
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();

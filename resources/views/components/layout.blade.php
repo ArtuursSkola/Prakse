@@ -49,9 +49,10 @@
     {{ $slot }}
 </main>
 
-<footer class="bg-purple-800 text-center text-gray-300 py-4 mt-auto">
+<footer class="bg-purple-800 text-center text-gray-300 py-4 mt-auto flex justify-center items-center">
     <p>&copy; 2025 TaskList. All rights reserved.</p>
 </footer>
+
 
 </body>
 </html>

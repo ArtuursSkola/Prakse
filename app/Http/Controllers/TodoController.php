@@ -9,20 +9,20 @@ class TodoController extends Controller
 {
 
 
-    // Show user's to-do lists
+
     public function index()
     {
-        $todos = Auth::user()->todos; // Fetch only the logged-in user's to-dos
+        $todos = Auth::user()->todos()->paginate(3);
         return view('todos.index', compact('todos'));
     }
 
-    // Show the create form
+
     public function create()
     {
         return view('todos.create');
     }
 
-    // Store a new to-do item
+
     public function store(Request $request)
     {
         $request->validate([
@@ -38,7 +38,7 @@ class TodoController extends Controller
         return redirect()->route('todos.index')->with('success', 'To-Do Item Created.');
     }
 
-    // Show the edit form
+
     public function edit(Todo $todo)
     {
         if ($todo->user_id !== Auth::id()) {
@@ -48,7 +48,7 @@ class TodoController extends Controller
         return view('todos.edit', compact('todo'));
     }
 
-    // Update the to-do item
+
     public function update(Request $request, Todo $todo)
     {
         if ($todo->user_id !== Auth::id()) {
@@ -68,7 +68,6 @@ class TodoController extends Controller
         return redirect()->route('todos.index')->with('success', 'To-Do Updated.');
     }
 
-    // Delete the to-do item
     public function destroy(Todo $todo)
     {
         if ($todo->user_id !== Auth::id()) {

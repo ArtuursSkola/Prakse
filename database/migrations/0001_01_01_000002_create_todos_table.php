@@ -6,12 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
-        // Create the 'todos' table to store tasks
+
         Schema::create('todos', function (Blueprint $table) {
             $table->id();  // Auto-incrementing ID
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
@@ -23,7 +21,7 @@ return new class extends Migration
             $table->timestamps();  // Automatically manage created_at and updated_at
         });
 
-        // Optional: You could add a table for "tags" or "categories" if needed for the to-do list
+
         Schema::create('todo_tags', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
@@ -31,7 +29,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Optional: Pivot table for many-to-many relationship between 'todos' and 'tags'
         Schema::create('todo_tag_todo', function (Blueprint $table) {
             $table->id();
             $table->foreignId('todo_id')->constrained()->onDelete('cascade');
@@ -40,9 +37,7 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('todos');

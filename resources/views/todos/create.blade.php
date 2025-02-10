@@ -12,19 +12,18 @@
             <form action="{{ route('todos.store') }}" method="POST" class="space-y-4">
                 @csrf
 
-                <!-- Title -->
+
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Title</label>
                     <input type="text" name="title" required class="w-full p-2 border border-gray-300 rounded-md">
                 </div>
 
-                <!-- Description -->
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Description</label>
                     <textarea name="description" class="w-full p-2 border border-gray-300 rounded-md"></textarea>
                 </div>
 
-                <!-- Status -->
+
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Status</label>
                     <select name="status" class="w-full p-2 border border-gray-300 rounded-md">
@@ -44,13 +43,15 @@
                     </select>
                 </div>
 
-                <!-- Due Date -->
+
                 <div>
-                    <label class="block text-sm font-medium text-gray-700">Due Date</label>
-                    <input type="date" name="due_date" class="w-full p-2 border border-gray-300 rounded-md">
+                    <label class="block text-sm font-medium text-gray-700">Due Date and Time</label>
+                    <input type="datetime-local" name="due_date" class="w-full p-2 border border-gray-300 rounded-md">
                 </div>
 
-                <button type="submit" class="btn mt-4">Save</button>
+                <x-form-button type="submit" class="btn mt-4">Save</x-form-button>
+                <a href="{{ route('todos.index') }}" class="btn btn-secondary mt-4">Cancel</a>
+
             </form>
         </main>
     </div>
