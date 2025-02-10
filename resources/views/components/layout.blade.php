@@ -12,9 +12,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50 min-h-screen flex flex-col m-0 p-0">
+<body class="font-sans antialiased dark:bg-black dark:text-white/50 min-h-screen flex flex-col m-0 p-0 bg-cover bg-center" style="background-image: url('{{ asset('images/backg.jpg') }}');">
 
-<nav class="bg-purple-800 fixed top-0 left-0 w-full z-50" aria-label="Main navigation">
+
+<nav class="bg-grey-500  top-0 left-0 w-full z-50 shadow-md" aria-label="Main navigation">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <h1 class="text-white text-lg font-semibold">TaskList</h1>
@@ -27,8 +28,8 @@
                 <x-nav href="/about" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('about')">About Page</x-nav>
             </div>
             @guest
-            <x-nav href="{{ route('login') }}" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('login')">Log in</x-nav>
-                @endguest
+                <x-nav href="{{ route('login') }}" class="text-white px-4 py-2 rounded hover:bg-purple-950" :active="request()->is('login')">Log in</x-nav>
+            @endguest
             @auth
                 <form method="Post" action="/logout">
                     @csrf
@@ -39,17 +40,13 @@
     </div>
 </nav>
 
-
+<hr>
 <main class="flex-grow pt-16">
-    <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
-        </div>
-    </header>
     {{ $slot }}
 </main>
 
-<footer class="bg-purple-800 text-center text-gray-300 py-4 mt-auto flex justify-center items-center">
+
+<footer class="bg-purple-800 bg-opacity-20 text-center text-gray-300 py-4 mt-auto flex justify-center items-center">
     <p>&copy; 2025 TaskList. All rights reserved.</p>
 </footer>
 

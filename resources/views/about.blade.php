@@ -7,9 +7,9 @@
 
     <div class="min-h-screen ">
         <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col items-center text-center">
-
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">TaskList</h2>
-            <p class="abt">
+            <div class="border-2 border-gray-300 p-6 rounded-lg bg-purple-600 bg-opacity-10">
+        <h2 class="text-2xl font-bold text-purple-900 mb-4">TaskList</h2>
+            <p class="abt text-white">
                 Welcome to TaskPro, your ultimate destination for efficient task management and organization!
                 Our website offers an intuitive and user-friendly platform for creating and managing to-do lists,
                 designed to boost your productivity and simplify your daily routine. Whether you're a busy professional,
@@ -27,8 +27,8 @@
                 TaskPro – where your tasks find a home!
             </p>
             <br><br>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Our To Do List website exceeds the competition, because our website has:</h2>
-            <ul class="list-disc pl-6 space-y-3">
+            <h2 class="text-2xl font-bold text-purple-900 mb-4">Our To Do List website exceeds the competition, because our website has:</h2>
+            <ul class="list-disc pl-6 space-y-3 text-white">
                 <li>Easy-to-use, minimalist interface for a smooth task management experience</li>
                 <li>Customizable task lists to suit your unique needs and priorities</li>
                 <li>Set deadlines and reminders to ensure you never miss an important task</li>
@@ -39,7 +39,7 @@
                 <li>Free version available with premium features for advanced users</li>
             </ul>
 
-            <p class="mt-6 text-gray-800">
+            <p class="mt-6 text-white">
                 Choose us for your task management needs and experience the difference. Our platform is designed to make your life easier, more productive, and stress-free. With a combination of simplicity, advanced features, and seamless integration, we stand apart from other to-do list apps. Get started with us today and see how we can help you stay organized and reach your goals!
             </p>
 
